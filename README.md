@@ -47,5 +47,39 @@ Step 5: Create config.py
 This file will load environment variables in one place, so the rest of the application doesn't need to know where they come from.
 
 Step 6: Create app.py
+-------------------------------------
+
+Lesson 2: Build the Planner Brain
+----------------------------------
+
+Step 1 — Create the Project Structure
+construction-ai-planner/
+
+prompts/
+    planner.py
+
+models/
+    planner_models.py
+
+planner.py
+
+Step 2 — Create the Planner Model
+
+We want the LLM to return structured data, not paragraphs.
+.models/planner_models.py
+
+Instead of getting:
+
+I think you should search the document.
+
+we get:
+
+{
+  "route": "rag",
+  "tool_name": null,
+  "reason": "Project-specific information."
+}
+
+
 
 
