@@ -1,5 +1,7 @@
 # Construction-AI_Planner
 
+Lesson 1: Project Setup & First LLM Call
+-----------------------------------------
 Step 1: Create the Project
 construction-ai-planner/
 │
@@ -37,4 +39,13 @@ Activate it:
 
 Step 3: Install Dependencies
 pip install - r requirements.txt
+
+Step4 : Create a .env file
+
+Step 5: Create config.py
+
+This file will load environment variables in one place, so the rest of the application doesn't need to know where they come from.
+
+Step 6: Create app.py
+
 
