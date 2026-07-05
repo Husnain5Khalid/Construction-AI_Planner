@@ -47,10 +47,11 @@ Step 5: Create config.py
 This file will load environment variables in one place, so the rest of the application doesn't need to know where they come from.
 
 Step 6: Create app.py
--------------------------------------
+----------------------------------------------------------------------------------------
 
-Lesson 2: Build the Planner Brain
-----------------------------------
+----------------------------------------------------------------------------------------
+Lesson 2: Build the Planner Brain (It just build the planner in which Concrete AI planner just think or plan what to do . It only make the decision, not answering or calculating)
+----------------------------------------------------------------------------------------
 
 Step 1 — Create the Project Structure
 construction-ai-planner/
@@ -79,6 +80,19 @@ we get:
   "tool_name": null,
   "reason": "Project-specific information."
 }
+
+Step 3 — Planner Prompt
+prompts/planner.py
+
+Step 4 - Build the Planner
+planner.py
+
+step 5 - Test IT
+app.py
+
+
+
+
 
 
 
