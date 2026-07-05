@@ -22,7 +22,7 @@ prompt = ChatPromptTemplate.from_messages(
 
 
 
-planner = prompt | structured_llm  # | called LangChain Expression Language (LCEL). It creates a pipeline.
+planner = prompt | structured_llm  # | means LangChain Expression Language (LCEL). It creates a pipeline.
 
 def route_question(question: str):
     decision = planner.invoke(

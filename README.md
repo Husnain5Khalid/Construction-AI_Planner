@@ -38,7 +38,7 @@ Activate it:
 .venv\Scripts\activate
 
 Step 3: Install Dependencies
-pip install - r requirements.txt
+pip install -r requirements.txt
 
 Step4 : Create a .env file
 
@@ -50,7 +50,7 @@ Step 6: Create app.py
 ----------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------
-Lesson 2: Build the Planner Brain (It just build the planner in which Concrete AI planner just think or plan what to do . It only make the decision, not answering or calculating)
+Lesson 2: Build the Planner Brain (It just build the planner in which Construction AI planner just think or plan what to do . It only make the decision, not answering or calculating)
 ----------------------------------------------------------------------------------------
 
 Step 1 — Create the Project Structure
@@ -89,6 +89,24 @@ planner.py
 
 step 5 - Test IT
 app.py
+------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------
+Lesson 3: Building the Tool Node:
+Point to Remember: at this lesson the planner still doesn't know how to calculate things. 
+It only knows which tool to use.
+------------------------------------------------------------------------------------------
+Step 1 - Create a Better Tool Structure
+tools/
+│
+├── __init__.py
+├── base.py
+├── concrete.py
+├── brick.py
+├── weather.py
+├── registry.py
+└── executor.py
+
 
 
 

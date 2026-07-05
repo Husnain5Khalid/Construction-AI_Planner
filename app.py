@@ -18,6 +18,8 @@ questions = [
     
     "What is OPC cement?",
 
+    "What is AI",
+
     "What is the beam size in Drawing A101?",
 
     "Calculate paint required for a 10m × 3m wall."
@@ -25,7 +27,7 @@ questions = [
     "Summarize our contract document."
 
     "What is the weather tomorrow?"
-    
+
     "Estimate bricks for a 20 ft wall."
 ]
 
