@@ -107,6 +107,10 @@ tools/
 ├── registry.py
 └── executor.py
 
+Step 2 — Create the First Tool
+tools/concrete.py
+
+
 
 
 
