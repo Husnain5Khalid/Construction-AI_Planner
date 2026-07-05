@@ -12,7 +12,8 @@ print(response.content)
 
 '''
 
-from planner import route_question
+#from planner import route_question
+'''
 
 questions = [
     
@@ -37,3 +38,8 @@ for q in questions:
     print("=" * 40)
     print(q)
     print(result)
+'''
+
+from tools.weather import get_weather
+
+print(get_weather("dammam"))
