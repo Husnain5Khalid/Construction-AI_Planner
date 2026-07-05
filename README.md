@@ -107,7 +107,7 @@ tools/
 ├── registry.py
 └── executor.py
 
-Step 2 — Create the First Tool
+Step 2 — Create the First Tool - concrete tool
 tools/concrete.py
 
 Step 3 — Brick Estimator
@@ -116,6 +116,26 @@ tools/brick.py
 Step 4 — Weather Tool
 tools/weather.py
 app.py
+
+Step 5 — Tool Registry
+tools/registry.py
+
+Imagine six months from now.
+
+we'll have:
+
+Concrete Tool
+Steel Tool
+BOQ Tool
+Weather Tool
+OCR Tool
+Excel Tool
+Cost Tool
+Schedule Tool
+
+We don't want a giant if/elif chain.
+Instead, we build a registry.
+
 
 
 
