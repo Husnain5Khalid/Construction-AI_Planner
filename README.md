@@ -110,7 +110,8 @@ tools/
 Step 2 — Create the First Tool
 tools/concrete.py
 
-
+Step 3 — Brick Estimator
+tools/brick.py
 
 
 
