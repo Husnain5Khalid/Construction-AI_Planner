@@ -136,6 +136,10 @@ Schedule Tool
 We don't want a giant if/elif chain.
 Instead, we build a registry.
 
+Step 6 — Tool Executor
+tools/executor.py
+This gives us a single entry point for running tools.
+
 
 
 
