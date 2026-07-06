@@ -39,7 +39,14 @@ for q in questions:
     print(q)
     print(result)
 '''
-
+'''
 from tools.weather import get_weather
 
 print(get_weather("dammam"))
+
+'''
+# Execute the tool
+from planner import route_question
+from tools.executor import execute_tool
+
+
