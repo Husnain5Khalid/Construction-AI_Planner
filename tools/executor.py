@@ -1,11 +1,27 @@
-from tools.registry import TOOLS
+from tools.registry import TOOL_REGISTRY
 
-def execute_tool(tool_name:str, **kwargs): #kwargs mean Keyword argument (exmple: Tool_name=weather, kwargs=Riyadh)
+ #kwargs mean Keyword argument (exmple: Tool_name=weather, kwargs=Riyadh)
+from tools.registry import TOOL_REGISTRY
 
-    tool = TOOLS.get(tool_name)
+def execute_tool(tool_name: str, **kwargs):
+    print("===== EXECUTOR START =====")
+    print("Tool:", tool_name)
+    print("Kwargs:", kwargs)
+
+    tool = TOOL_REGISTRY.get(tool_name)
+
+    print("Function:", tool)
 
     if tool is None:
-        raise ValueError(f"unknown tool: {tool_name}")
-    
-    return tool(**kwargs)
+        raise ValueError(f"Unknown tool: {tool_name}")
 
+    result = tool(**kwargs)
+
+    print("Tool Result:", result)
+    print("===== EXECUTOR END =====")
+
+    return result
+
+
+
+    

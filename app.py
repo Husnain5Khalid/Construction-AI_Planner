@@ -69,6 +69,7 @@ if decision.route == "tool":
     print(tool)
 
 '''
+'''
 from agents.tool_agent import ToolAgent
 
 agent = ToolAgent()
@@ -78,3 +79,18 @@ result = agent.run(
 )
 
 print(result)
+'''
+
+from agents.tool_agent import ToolAgent
+from planner import route_question
+from agents.tool_agent import ToolAgent
+
+question = "Calculate concrete for 10m x 5m x 0.15m"
+
+decision = route_question(question)
+print(decision)
+
+if decision.route == "tool":
+    agent = ToolAgent()
+    result = agent.run(question)
+    print(result)
