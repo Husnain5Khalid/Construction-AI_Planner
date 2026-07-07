@@ -46,7 +46,24 @@ print(get_weather("dammam"))
 
 '''
 # Execute the tool
+'''
 from planner import route_question
 from tools.executor import execute_tool
+'''
+from planner import route_question
+from agents.tool_agent import ToolAgent
 
+question = "Calculate concrete volume"
+
+decision = route_question(question)
+
+print(decision)
+
+if decision.route == "tool":
+
+    tool_agent = ToolAgent()
+
+    tool = tool_agent.run(question)
+
+    print(tool)
 

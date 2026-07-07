@@ -136,9 +136,67 @@ Schedule Tool
 We don't want a giant if/elif chain.
 Instead, we build a registry.
 
-Step 6 — Tool Executor
+Step 6 — Tool Executor(Running Tools)
 tools/executor.py
 This gives us a single entry point for running tools.
+
+
+Step 7 — Improve the Planner Output
+models/planner_models.py
+
+Our current planner returns:
+
+{
+    "route": "tool",
+    "tool_name": "calculator"
+}
+
+That's not enough.
+
+The executor doesn't know what inputs to pass.
+
+Instead, update PlannerDecision:
+---------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+Lesson 4 - – Build the Tool Agent
+An AI agent is a component that can reason, decide, act, and return a result.
+-----------------------------------------------------------------
+
+Step 1 – Build the Tool Agent Skeleton
+agents/tool_agent.py
+
+Why Use Private Methods?
+
+We'll make these helper methods private.
+
+def _choose_tool()
+
+def _extract_parameters()
+
+def _execute_tool()
+
+def _generate_response()
+
+Only one public method:
+
+run()
+
+This is called encapsulation.
+
+The rest of the application doesn't care about the internal implementation.
+
+Step -2 : Parameter Extraction
+models/parameter_model.py
+
+Step-3 : Parameters Prompt
+prompts/parameter_extractor.py
+
+Step-4 : Build the Parameter Extractor
+Inside ToolAgent:
+
+Step 5 – Execute the Tool
+This part uses the work you've already completed.
 
 
 
