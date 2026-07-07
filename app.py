@@ -50,6 +50,7 @@ print(get_weather("dammam"))
 from planner import route_question
 from tools.executor import execute_tool
 '''
+'''
 from planner import route_question
 from agents.tool_agent import ToolAgent
 
@@ -67,3 +68,13 @@ if decision.route == "tool":
 
     print(tool)
 
+'''
+from agents.tool_agent import ToolAgent
+
+agent = ToolAgent()
+
+result = agent.run(
+    "Calculate concrete for a slab 10m x 5m x 0.15m"
+)
+
+print(result)

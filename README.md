@@ -163,48 +163,39 @@ Lesson 4 - – Build the Tool Agent
 An AI agent is a component that can reason, decide, act, and return a result.
 -----------------------------------------------------------------
 
-Step 1 – Build the Tool Agent Skeleton
-agents/tool_agent.py
+Lesson 4.1 - Tool Selection Agent(Under Tool Agent)
+Step 1: Create the Tool Model
+File: models/tool_model.py
 
-Why Use Private Methods?
+Step 2: Create the Prompt
+File: prompts/tool_selector.py
 
-We'll make these helper methods private.
+Step 3: Create the Tool Selector
+File: agents/tool_selector.py
 
-def _choose_tool()
+Step 4: Create the Tool Agent
+File: agents/tool_agent.py
 
-def _extract_parameters()
+Step 5: Test It
+Update app.py
 
-def _execute_tool()
+Lesson 4.2 – Parameter Extraction Agent (Inside ToolAgent)
 
-def _generate_response()
-
-Only one public method:
-
-run()
-
-This is called encapsulation.
-
-The rest of the application doesn't care about the internal implementation.
-
-Step -2 : Parameter Extraction
+Step 1 – Create the Parameter Model
 models/parameter_model.py
 
-Step-3 : Parameters Prompt
+
+Step 2 – Create the Prompt
 prompts/parameter_extractor.py
 
-Step-4 : Build the Parameter Extractor
-Inside ToolAgent:
+Step 3 – Create the Extractor
+agents/parameter_extractor.py
 
-Step 5 – Execute the Tool
-This part uses the work you've already completed.
+Step 4 – Update ToolAgent
+agents/tool_agent.py.
 
-
-
-
-
-
-
-
+Step 5 – Test
+Update app.py.
 
 
 
