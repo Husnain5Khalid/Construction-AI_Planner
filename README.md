@@ -62,7 +62,7 @@ prompts/
 models/
     planner_models.py
 
-planner.py
+planner.py(Later moved in agent/planner.py)
 
 Step 2 — Create the Planner Model
 
@@ -197,7 +197,34 @@ agents/tool_agent.py.
 Step 5 – Test
 Update app.py.
 
+Lesson 4.3 – Execute the Tool
+Step 1 – Verify executor.py
 
+Step 2 – Verify registry.py
+
+Step 3 – Update ToolAgent
+Modify agents/tool_agent.py.
+
+Step 4 – Test in app.py
+
+Lesson 4.4 – AI Response Generator
+
+Step 1 – Create the Prompt
+prompts/tool_response.py
+
+Step 2 – Create the Response Generator
+agents/response_generator.py
+
+Step 3 – Update ToolAgent
+Modify agents/tool_agent.py
+
+
+Step 4 – Update app.py
+----------------------------------------------------------------------------------------
+
+Lesson-5: Retrieval_Augmented Generation (Rag)
+
+---------------------------------------------------------------------------------
 
 
 
