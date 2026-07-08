@@ -2,3 +2,9 @@ langchain
 langgraph
 langchain-groq
 python-dotenv
+requests
+langchain-community
+langchain-text-splitters
+chromadb
+pypdf
+
