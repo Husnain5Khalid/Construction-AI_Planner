@@ -259,7 +259,10 @@ rag/embeddings.py
 Step 2 — Test It
 test_embeddings.py
 
-Lesson 5.3 : 
+Lesson 5.3 : ChromaDB (Vector Database)
+Step 1 - rag/
+    vector_store.py
+
 
 
 
