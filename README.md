@@ -253,6 +253,8 @@ print(chunks[0].metadata)
 
 
 Lesson 5.2 Embeddings
+Step 1 — Create embeddings.py
+embeddings.py
 
 
 
