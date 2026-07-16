@@ -225,6 +225,14 @@ Step 4 – Update app.py
 Lesson-5: Retrieval_Augmented Generation (Rag)
 
 ---------------------------------------------------------------------------------
+lesson 5.1: Load PDF & Split into Chunks
+
+Step 1 — Create a New Folder
+data/constrcutin.pdf
+rag/__init__.py, loader.py, splitter.py
+
+Step 2 — loader.py
+
 
 
 
