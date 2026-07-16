@@ -267,6 +267,7 @@ Step 2 — Create the Database
 vector_db/build_vector_db.py
 
 
+Lesson 5.4 – Retriever (Semantic Search)
 
 
 
