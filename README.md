@@ -261,7 +261,11 @@ test_embeddings.py
 
 Lesson 5.3 : ChromaDB (Vector Database)
 Step 1 - rag/
-    vector_store.py
+    vector_store.py  ## This does three things: Chunks -> Embeddings -> Store in Chroma
+
+Step 2 — Create the Database
+vector_db/build_vector_db.py
+
 
 
 
