@@ -231,8 +231,25 @@ Step 1 — Create a New Folder
 data/constrcutin.pdf
 rag/__init__.py, loader.py, splitter.py
 
-Step 2 — loader.py
+Step 2 — rag/loader.py
 
+Step 3 — Test the Loader
+Create a temporary file: test_loader.py
+
+Step 4 — Inspect One Document
+print(documents[0])
+
+Step 5 — Create the Splitter
+rag/splitter.py
+
+Step 6 — Test the Splitter
+test_splitter.py
+
+Step 7 — Inspect a Chunk
+print(chunks[0].page_content)
+
+Step 8 — Inspect Metadata
+print(chunks[0].metadata)
 
 
 
