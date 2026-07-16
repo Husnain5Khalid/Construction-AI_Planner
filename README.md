@@ -252,12 +252,14 @@ Step 8 — Inspect Metadata
 print(chunks[0].metadata)
 
 
-Lesson 5.2 Embeddings
+Lesson 5.2: Embeddings
 Step 1 — Create embeddings.py
-embeddings.py
+rag/embeddings.py
 
+Step 2 — Test It
+test_embeddings.py
 
-
+Lesson 5.3 : 
 
 
 
