@@ -251,7 +251,11 @@ print(chunks[0].page_content)
 Step 8 — Inspect Metadata
 print(chunks[0].metadata)
 
-Lesson 5.2
+
+Lesson 5.2 Embeddings
+
+
+
 
 
 
