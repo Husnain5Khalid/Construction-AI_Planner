@@ -281,3 +281,8 @@ prompts/rag.py
 
 Step 2 – Create rag_agent.py
 rag/rag_agent.py
+
+Step 3 – Test the RAG Agent
+test_rag.py
+----------------------------------------------------------------------------------
+
