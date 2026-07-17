@@ -268,6 +268,7 @@ vector_db/build_vector_db.py
 
 
 Lesson 5.4 – Retriever (Semantic Search)
+Step 1 — Create rag/retriever.py
 
 
 
