@@ -279,3 +279,5 @@ Lesson 5.5 – Build the RAG Agent
 Step 1 – Create the Prompt
 prompts/rag.py
 
+Step 2 – Create rag_agent.py
+rag/rag_agent.py
