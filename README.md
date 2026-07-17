@@ -276,3 +276,6 @@ test_retriever.py
 
 Lesson 5.5 – Build the RAG Agent
 
+Step 1 – Create the Prompt
+prompts/rag.py
+
