@@ -96,7 +96,7 @@ if decision.route == "tool":
     print(result)
 
 '''
-
+'''
 from agents.planner import route_question
 from agents.tool_agent import ToolAgent
 
@@ -111,3 +111,37 @@ if decision.route == "tool":
     answer = agent.run(question)
 
     print(answer)
+'''
+
+from agents.planner import route_question
+from agents.llm_agent import LLMAgent
+from agents.tool_agent import ToolAgent
+from rag.rag_agent import RAGAgent
+
+
+llm_agent = LLMAgent()
+
+tool_agent = ToolAgent()
+
+rag_agent = RAGAgent()
+
+question = input("Ask: ")
+
+decision = route_question(question)
+
+print(decision)
+
+if decision.route == "tool":
+
+    response = tool_agent.run(question)
+
+elif decision.route == "rag":
+
+    response = rag_agent.run(question)
+
+else:
+
+    response = llm_agent.run(question)
+
+print(response)
+
