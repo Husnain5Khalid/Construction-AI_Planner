@@ -307,6 +307,7 @@ update app.py
 Lesson 8 : LANGGRAPH
 ---------------------------------------------------------------------
 
-
+Lesson 8.1 : Integrate Real Planner Agent into LangGraph
+Step1 : graph/state.py
 
 
