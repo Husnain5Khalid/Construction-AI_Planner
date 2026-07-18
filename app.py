@@ -112,7 +112,7 @@ if decision.route == "tool":
 
     print(answer)
 '''
-
+'''
 from agents.planner import route_question
 from agents.llm_agent import LLMAgent
 from agents.tool_agent import ToolAgent
@@ -144,4 +144,18 @@ else:
     response = llm_agent.run(question)
 
 print(response)
+'''
 
+from graph.workflow import graph
+
+question = input("Ask: ")
+
+result = graph.invoke(
+    {
+        "question": question,
+        "route": "",
+        "answer": ""
+    }
+)
+
+print(result["answer"])
