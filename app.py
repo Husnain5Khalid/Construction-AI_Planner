@@ -148,14 +148,26 @@ print(response)
 
 from graph.workflow import graph
 
-question = input("Ask: ")
+while True:
 
-result = graph.invoke(
-    {
-        "question": question,
-        "route": "",
-        "answer": ""
-    }
-)
+    question = input("\nAsk: ")
 
-print(result["answer"])
+    if question.lower() == "exit":
+        break
+
+    result = graph.invoke(
+        {
+            "question": question,
+            "route": "",
+            "tool_name": None,
+            "tool_input": {},
+            "retrieved_documents": [],
+            "tool_result": None,
+            "answer": ""
+        }
+    )
+
+    print("\nAnswer:")
+    print(result["answer"])
+
+    
