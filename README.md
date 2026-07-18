@@ -310,4 +310,11 @@ Lesson 8 : LANGGRAPH
 Lesson 8.1 : Integrate Real Planner Agent into LangGraph
 Step1 : graph/state.py
 
+step2 : graph/nodes.py 
+Now we wrap our Planner Agent.
+
+
+
+
+
 
