@@ -26,5 +26,23 @@ def llm_node(state: ConstructionState):
     return state
 
 
+# Wrap the Tool Agent
+
+from agents.tool_agent import ToolAgent
+
+tool = ToolAgent()
+
+
+def tool_node(state: ConstructionState):
+
+    state["answer"] = tool.run(
+        state["question"]
+    )
+
+    return state
+
+
+
+
 
 
