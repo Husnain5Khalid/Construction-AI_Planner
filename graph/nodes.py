@@ -15,6 +15,15 @@ def route_decision(state: ConstructionState):
 
 # Wrap the  LLM Agent
 
+llm = LLMAgent()
+
+def llm_node(state: ConstructionState):
+
+    state["answer"] = llm.run(
+        state["question"]
+    )
+
+    return state
 
 
 
