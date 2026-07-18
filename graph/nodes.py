@@ -42,6 +42,21 @@ def tool_node(state: ConstructionState):
     return state
 
 
+# Wrap RAG Agent
+
+from rag.rag_agent import RAGAgent
+
+rag = RAGAgent()
+
+
+def rag_node(state: ConstructionState):
+
+    state["answer"] = rag.run(
+        state["question"]
+    )
+
+    return state
+
 
 
 
