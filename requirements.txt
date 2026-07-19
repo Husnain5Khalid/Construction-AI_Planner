@@ -10,3 +10,4 @@ pypdf
 sentence-transformers
 langchain-huggingface
 langchain-chroma
+streamlit
