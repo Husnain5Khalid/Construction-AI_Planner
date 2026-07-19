@@ -8,8 +8,6 @@ def planner_node(state: ConstructionState):
     decision = route_question(state["question"])
 
     state["route"] = decision.route
-    state["tool_name"] = decision.tool_name
-    state["tool_input"] = decision.tool_input
 
     return state
 
@@ -42,16 +40,12 @@ Generate a helpful final answer.
 
 from agents.tool_agent import ToolAgent
 
-tool = ToolAgent()
+tool_agent = ToolAgent()
 
 
-def tool_node(state):
+def tool_node(state: ConstructionState):
 
-    result = tool.run(
-        state["question"]
-    )
-
-    state["tool_result"] = result
+    state["answer"] = tool_agent.run(state["question"])
 
     return state
 
@@ -61,13 +55,11 @@ from rag.rag_agent import RAGAgent
 rag = RAGAgent()
 
 
-def rag_node(state):
+def rag_node(state: ConstructionState):
 
-    documents = rag.retrieve(
-        state["question"]
-    )
+    answer = rag.run(state["question"])
 
-    state["retrieved_documents"] = documents
+    state["answer"] = answer
 
     return state
 

@@ -1,6 +1,8 @@
 from langchain_chroma import Chroma
 
 from rag.embeddings import get_embedding_model
+from rag.loader import PDFLoader
+from rag.splitter import DocumentSplitter
 
 
 class ConstructionVectorStore:
@@ -8,7 +10,6 @@ class ConstructionVectorStore:
     def __init__(self):
 
         self.embedding_model = get_embedding_model()
-
         self.persist_directory = "vector_db"
 
     def create(self, documents):
@@ -26,34 +27,22 @@ class ConstructionVectorStore:
             embedding_function=self.embedding_model
         )
 
-'''
-Without persist_directory:
 
-Database
+def ingest_pdf(pdf_path: str):
+    """
+    Complete PDF ingestion pipeline.
+    """
 
-↓
+    # Load PDF
+    loader = PDFLoader(pdf_path)
+    documents = loader.load()
 
-Memory
+    # Split into chunks
+    splitter = DocumentSplitter()
+    chunks = splitter.split(documents)
 
-↓
+    # Store in ChromaDB
+    vector_store = ConstructionVectorStore()
+    vector_store.create(chunks)
 
-Lost after restart
-
-With it:
-
-Database
-
-↓
-
-vector_db/
-
-↓
-
-Saved on disk
-
-Next time you run the application:
-
-No need to recreate embeddings.
-
-
-'''
+    return len(chunks)

@@ -32,8 +32,8 @@ builder.add_conditional_edges(
     }
 )
 
-builder.add_edge("tool", "llm")
-builder.add_edge("rag", "llm")
+builder.add_edge("tool", END)
+builder.add_edge("rag", END)
 builder.add_edge("llm", END)
 
 graph = builder.compile()
