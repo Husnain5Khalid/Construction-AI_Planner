@@ -10,3 +10,5 @@ class PDFLoader:
         loader = PyPDFLoader(self.pdf_path)
         documents = loader.load()
         return documents
+    
+    
