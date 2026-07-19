@@ -332,6 +332,11 @@ updated workflow.py
 Lesson 10 : Multi-Step Agentic Workflow
 ----------------------------------------------------------------------------
 
+Step1: Updated graph/state.py
+step2: updated the node.py
+step3 : Update the workflow
+
+
 
 
 

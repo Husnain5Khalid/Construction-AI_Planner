@@ -1,63 +1,78 @@
-from agents.planner import route_question
 from graph.state import ConstructionState
-from agents.llm_agent import LLMAgent
+from agents.planner import route_question
 
-#Wrapping planner agent
+# pLanner node
+
 def planner_node(state: ConstructionState):
+
     decision = route_question(state["question"])
+
     state["route"] = decision.route
+    state["tool_name"] = decision.tool_name
+    state["tool_input"] = decision.tool_input
+
     return state
 
-#Router Function(which Route is this)
-def route_decision(state: ConstructionState):
-    return state["route"]
-
-
-# Wrap the  LLM Agent
+# LLM Node
+from agents.llm_agent import LLMAgent
 
 llm = LLMAgent()
 
-def llm_node(state: ConstructionState):
 
-    state["answer"] = llm.run(
-        state["question"]
-    )
+def llm_node(state):
+
+    prompt = f"""
+Question:
+{state["question"]}
+
+Retrieved Documents:
+{state["retrieved_documents"]}
+
+Tool Result:
+{state["tool_result"]}
+
+Generate a helpful final answer.
+"""
+
+    state["answer"] = llm.run(prompt)
 
     return state
 
-
-# Wrap the Tool Agent
+# Tool Node
 
 from agents.tool_agent import ToolAgent
 
 tool = ToolAgent()
 
 
-def tool_node(state: ConstructionState):
+def tool_node(state):
 
-    state["answer"] = tool.run(
+    result = tool.run(
         state["question"]
     )
 
+    state["tool_result"] = result
+
     return state
 
-
-# Wrap RAG Agent
-
+# RAG Node
 from rag.rag_agent import RAGAgent
 
 rag = RAGAgent()
 
 
-def rag_node(state: ConstructionState):
+def rag_node(state):
 
-    state["answer"] = rag.run(
+    documents = rag.retrieve(
         state["question"]
     )
 
+    state["retrieved_documents"] = documents
+
     return state
 
+# Router Function
+def route_decision(state: ConstructionState):
 
-
-
+    return state["route"]
 
